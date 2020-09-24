@@ -5,19 +5,16 @@
 % node sayGoodbye.js React
 Goodbye, React*/
 
-
-
-
 const sayGoodbye = () => {
-    let name = process.argv[2]
     if (process.argv.length != 3) {
-        return 'error : not argument or use on argument'
-    } if (!isNaN(name)) {
-        return 'error : not use Number'
+        console.log('error : not argument or use on argument')
+        process.exit(1)
     }
-    return `Goodbye, ${name}`
+    if (!isNaN(process.argv[2])) {
+        console.log('error : not use Number')
+        process.exit(2)
+    }
+    let name = process.argv[2]
+    console.log(`Goodbye, ${name}`)
 }
-
 sayGoodbye()
-
-console.log(sayGoodbye())

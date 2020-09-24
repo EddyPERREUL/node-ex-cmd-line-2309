@@ -13,11 +13,10 @@ const showArgs = () => {
     if (process.argv.length <= 2) {
         console.log('error : not argument')
         process.exit(1)
-    } 
+    }
     const inputs = process.argv.slice(2).reverse()
-    for (let i = 0 ; i < inputs.length ; i += 1) {
+    for (let i = 0; i < inputs.length; i += 1) {
         console.log(inputs[i])
-    }  
+    }
 }
 showArgs()
-
