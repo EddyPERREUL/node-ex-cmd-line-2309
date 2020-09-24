@@ -19,4 +19,5 @@ const showArgs = () => {
         console.log(inputs[i])
     }  
 }
+showArgs()
 
